@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.swiper-slide {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    position: relative; /* Permite o posicionamento absoluto dentro do slide */
+    transition: transform 0.6s ease-in-out;
+}
+
+.slide-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.slide-image {
+    height: 500px;
+    max-width: 100%;
+    object-fit: contain; /* Garante que a imagem mantenha a proporção */    
+}
+
+.info-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 500px;
+}
+
+.info-slide h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+}
+
+.info-slide h5 {
+    color: #f6aa1c;
+    font-size: 1rem;
+}
+
+.info-slide p {
+    color: #474747;
+    font-size: 1rem;
+}
+
+.swiper-pagination-bullet {
+    background-color: #666565 !important;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #c92071 !important;
+}
+
+@media (max-width: 1024px) {
+    .slide-group {
+        gap: 1.5rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info-slide h1 {
+        font-size: 3rem;
+    }
+
+    .slide-image {
+        height: 400px;
+    }
+}
+
+@media (max-width:768px) {
+    .slide-group {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .info-slide h1 {
+        font-size: 2.5rem;
+    }
+
+    .slide-image {
+        height: 350px;
+    }
+}
+
+@media (max-width:480px) {
+    .slide-group {
+        padding: 1rem;
+    }
+
+    .info-slide {
+        gap: 1rem;
+    }
+
+    .info-slide h1 {
+        font-size: 1rem;
+    }
+
+    .info-slide p {
+        font-size: 0.9rem;
+    }
+
+    .slide-image {
+        height: 250px;
+    }
+}
